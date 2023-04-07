@@ -1,33 +1,28 @@
-require("dotenv").config()
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
-
+/**
+ * @type {import('gatsby').GatsbyConfig}
+ */
 module.exports = {
-  plugins: [
-    {
-      resolve: "gatsby-source-sanity",
-      options: {
-        projectId: process.env.SANITY_PROJECT_ID,
-        dataset: process.env.SANITY_PROJECT_DATASET,
-        token: process.env.SANITY_READ_TOKEN,
-      },
+  siteMetadata: {
+    title: `cat-rescue-app`,
+    siteUrl: `https://www.yourdomain.tld`
+  },
+  plugins: [{
+    resolve: 'gatsby-source-sanity',
+    options: {
+      "projectId": "jsyybsvd",
+      "dataset": "production"
+    }
+  }, "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-sass", "gatsby-plugin-sitemap", {
+    resolve: 'gatsby-plugin-manifest',
+    options: {
+      "icon": "src/images/icon.png"
+    }
+  }, {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      "name": "images",
+      "path": "./src/images/"
     },
-    "gatsby-plugin-sharp",
-    "gatsby-plugin-image",
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-vanilla-extract",
-    {
-      resolve: "gatsby-plugin-manifest",
-      options: {
-        name: "Gatsby Starter Sanity Homepage",
-        short_name: "Gatsby",
-        start_url: "/",
-        // These can be imported once ESM support lands
-        background_color: "#ffe491",
-        theme_color: "#004ca3",
-        icon: "src/favicon.png",
-      },
-    },
-  ],
-}
+    __key: "images"
+  }]
+};
