@@ -59,6 +59,7 @@ exports.createPages = async ({ graphql, actions }) => {
   }
 
   const locations = result.data.allSanityLocation.edges || [];
+
   locations.forEach((edge, index) => {
     const path = `/locations/${edge.node.slug.current}`;
 
