@@ -39,6 +39,20 @@ export default defineType({
       type: 'datetime',
     }),
     defineField({
+      name: 'sex',
+      title: 'Sex',
+      type: 'string',
+      options: {
+        list: ['Male', 'Female', 'Unknown']
+      }
+    }),
+    defineField({
+      name: 'breed',
+      title: 'Breed',
+      type: 'reference',
+      to: [{type: 'cat-breed'}]
+    }),
+    defineField({
       name: 'body',
       title: 'Body',
       type: 'blockContent',
