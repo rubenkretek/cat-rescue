@@ -31,7 +31,7 @@ export default defineType({
       name: 'location',
       title: 'Location',
       type: 'reference',
-      to: [{type: 'location'}]
+      to: [{type: 'location'}],
     }),
     defineField({
       name: 'publishedAt',
@@ -43,14 +43,63 @@ export default defineType({
       title: 'Sex',
       type: 'string',
       options: {
-        list: ['Male', 'Female', 'Unknown']
-      }
+        list: ['Male', 'Female', 'Unknown'],
+      },
     }),
     defineField({
       name: 'breed',
       title: 'Breed',
       type: 'reference',
-      to: [{type: 'cat-breed'}]
+      to: [{type: 'cat-breed'}],
+    }),
+    defineField({
+      name: 'colour',
+      title: 'Colour',
+      type: 'string',
+    }),
+    defineField({
+      title: 'Can live with other cats?',
+      name: 'likesCats',
+      type: 'boolean',
+      initialValue: false,
+      options: {
+        layout: 'checkbox',
+      },
+    }),
+    defineField({
+      title: 'Can live with dogs?',
+      name: 'likesDogs',
+      type: 'boolean',
+      initialValue: false,
+      options: {
+        layout: 'checkbox',
+      },
+    }),
+    defineField({
+      title: 'Can live with children?',
+      name: 'likesChildren',
+      type: 'boolean',
+      initialValue: false,
+      options: {
+        layout: 'checkbox',
+      },
+    }),
+    defineField({
+      title: 'Likes older families?',
+      name: 'olderFamilies',
+      type: 'boolean',
+      initialValue: false,
+      options: {
+        layout: 'checkbox',
+      },
+    }),
+    defineField({
+      name: 'outdoorIndoor',
+      title: 'Outdoor/Indoor',
+      type: 'string',
+      options: {
+        list: ['Outdoor', 'Indoor', 'Either'],
+      },
     }),
     defineField({
       name: 'body',
