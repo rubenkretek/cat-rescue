@@ -6,8 +6,8 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'title',
-      title: 'Title',
+      name: 'name',
+      title: 'Name',
       type: 'string',
     }),
     defineField({
@@ -15,7 +15,7 @@ export default defineType({
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'title',
+        source: 'name',
         maxLength: 96,
       },
     }),
@@ -34,71 +34,12 @@ export default defineType({
       to: [{type: 'location'}],
     }),
     defineField({
-      name: 'publishedAt',
-      title: 'Published at',
-      type: 'datetime',
-    }),
-    defineField({
-      name: 'sex',
-      title: 'Sex',
-      type: 'string',
+      title: 'Info',
+      name: 'catInfo',
+      type: 'catInfo',
       options: {
-        list: ['Male', 'Female', 'Unknown'],
-      },
-    }),
-    defineField({
-      name: 'breed',
-      title: 'Breed',
-      type: 'reference',
-      to: [{type: 'cat-breed'}],
-    }),
-    defineField({
-      name: 'colour',
-      title: 'Colour',
-      type: 'string',
-    }),
-    defineField({
-      title: 'Can live with other cats?',
-      name: 'likesCats',
-      type: 'boolean',
-      initialValue: false,
-      options: {
-        layout: 'checkbox',
-      },
-    }),
-    defineField({
-      title: 'Can live with dogs?',
-      name: 'likesDogs',
-      type: 'boolean',
-      initialValue: false,
-      options: {
-        layout: 'checkbox',
-      },
-    }),
-    defineField({
-      title: 'Can live with children?',
-      name: 'likesChildren',
-      type: 'boolean',
-      initialValue: false,
-      options: {
-        layout: 'checkbox',
-      },
-    }),
-    defineField({
-      title: 'Likes older families?',
-      name: 'olderFamilies',
-      type: 'boolean',
-      initialValue: false,
-      options: {
-        layout: 'checkbox',
-      },
-    }),
-    defineField({
-      name: 'outdoorIndoor',
-      title: 'Outdoor/Indoor',
-      type: 'string',
-      options: {
-        list: ['Outdoor', 'Indoor', 'Either'],
+        collapsible: true,
+        collapsed: false,
       },
     }),
     defineField({
