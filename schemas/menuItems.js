@@ -11,13 +11,11 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
-      options: {
-        source: 'label',
-        maxLength: 96,
-      },
+      name: 'page',
+      title: 'Page',
+      description: 'Which page do you want this menu item to link to?',
+      type: 'reference',
+      to: [{type: 'page'}],
     }),
     defineField({
       name: 'parent',
