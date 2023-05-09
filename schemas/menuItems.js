@@ -17,12 +17,12 @@ export default defineType({
       type: 'reference',
       to: [{type: 'page'}],
     }),
-    defineField({
-      name: 'parent',
-      title: 'Parent',
-      type: 'reference',
-      to: [{type: 'menu-items'}],
-    }),
+    // defineField({
+    //   name: 'parent',
+    //   title: 'Parent',
+    //   type: 'reference',
+    //   to: [{type: 'menu-items'}],
+    // }),
     defineField({
       name: 'description',
       title: 'Description',
