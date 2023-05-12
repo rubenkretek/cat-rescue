@@ -21,6 +21,11 @@ export default defineType({
       type: 'image',
     }),
     defineField({
+      name: 'logoWhite',
+      title: 'Logo White',
+      type: 'image',
+    }),
+    defineField({
       name: 'primaryColour',
       title: 'Primary Colour',
       type: 'color',
