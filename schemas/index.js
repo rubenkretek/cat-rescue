@@ -7,6 +7,7 @@ import catInfo from './catInfo'
 import menuItems from './menuItems'
 import siteSettings from './settings/siteSettings'
 import branding from './settings/branding'
+import homePage from './settings/homePage'
 
 export const schemaTypes = [
   cat,
@@ -18,4 +19,5 @@ export const schemaTypes = [
   menuItems,
   siteSettings,
   branding,
+  homePage,
 ]

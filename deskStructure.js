@@ -17,6 +17,9 @@ export const myStructure = (S) =>
               S.listItem()
                 .title('Branding')
                 .child(S.document().schemaType('branding').documentId('branding')),
+              S.listItem()
+                .title('Home Page')
+                .child(S.document().schemaType('homePage').documentId('homePage')),
               //   S.listItem()
               //     .title('Main Navigation')
               //     .child(S.document().schemaType('navigation').documentId('navigation')),
@@ -24,6 +27,7 @@ export const myStructure = (S) =>
         ),
       // We also need to remove the new singletons from the main list
       ...S.documentTypeListItems().filter(
-        (listItem) => !['siteSettings', 'branding', 'navigation'].includes(listItem.getId())
+        (listItem) =>
+          !['siteSettings', 'branding', 'navigation', 'homePage'].includes(listItem.getId())
       ),
     ])
