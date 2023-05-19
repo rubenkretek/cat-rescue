@@ -26,14 +26,8 @@ export default defineType({
       type: 'array',
       of: [
         {
-          type: 'object',
-          name: 'inline',
-          fields: [
-            {name: 'title', title: 'Title', type: 'string'},
-            {name: 'description', title: 'Description', type: 'string'},
-            {type: 'image', title: 'Image', name: 'heroImage'},
-            {name: 'link', title: 'Link', type: 'reference', to: [{type: 'page'}]},
-          ],
+          name: 'singleBlock',
+          type: 'singleBlock',
         },
       ],
     }),

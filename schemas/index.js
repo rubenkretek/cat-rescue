@@ -8,6 +8,7 @@ import menuItems from './menuItems'
 import siteSettings from './settings/siteSettings'
 import branding from './settings/branding'
 import homePage from './settings/homePage'
+import singleBlock from './settings/singleBlock'
 
 export const schemaTypes = [
   cat,
@@ -20,4 +21,5 @@ export const schemaTypes = [
   siteSettings,
   branding,
   homePage,
+  singleBlock,
 ]
